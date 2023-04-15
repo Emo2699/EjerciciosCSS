@@ -1,0 +1,113 @@
+h1{
+    text-align: center;
+}
+
+/*Estilos del indice*/
+.indice li{
+    list-style:none;
+}
+.indice a{
+    text-decoration: none;
+    color: blue;
+}
+
+/*Estilos de la imagen*/
+.imagen{
+    margin: 0;
+    min-width: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imagen img{
+    min-width: inherit;
+    height: auto;
+}
+.imagen figcaption{
+    font-size: 20px;
+    font-style: italic;
+}
+
+/*Estilos para la seccion Flex*/
+.container{
+    background-color: #333;
+    display: inline-flex; 
+}
+
+.item{
+    background-color: #e2dada;
+    border: medium solid #ed5959;
+}
+
+/*Estilos para la seccion de Flex-direction*/
+.propiedad-row{
+    background-color: #333;
+    height: 30vh; /*vh = viewport heigth*/
+    display: flex;
+    flex-direction: row;
+}
+
+.propiedad-column{
+    background-color: #333;
+    height: 30vh; /*vh = viewport heigth*/
+    display: flex;
+    flex-direction: column;
+}
+
+/*Estilos para la seccion de Wrap*/
+.propiedad-wrap{
+    background-color: #333;
+    height: 30vh; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.propiedad-nowrap{
+    background-color: #333;
+    height: 30vh; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/*Estilos para la alineacion*/
+.start{
+    background-color: #333;
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+}
+.centro{
+    background-color: #333;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.final{
+    background-color:#333;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+}
+.con-espacios{
+    background-color: #333;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.espacios2{
+    background-color: #333;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.espacios3{
+    background-color: #333;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}

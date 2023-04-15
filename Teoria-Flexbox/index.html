@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <h1>Introduccion a Flexbox</h1>
+    <div id="indice" class="indice">
+        <h4>Indice</h4>
+        <ul>
+            <li><a href="index.html#Propiedad_Display">Propiedad Display</a></li>
+            <li><a href="index.html#Propiedad-flexDirection">Flex-direction</a></li>
+            <li><a href="index.html#Propiedad-wrap">Wrap</a></li>
+            <li><a href="index.html#Alineacion">Alineacion de los elementos</a></li>
+            <li><a href="index.html#Eje-Secundario">Alineacion en el Eje secundario o cross axis</a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+    <figure class="imagen">
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210906220644/Architecture.png" alt="Imagen de Flexbox">
+        <figcaption>Imagen de Flexbox</figcaption>
+    </figure>
+
+
+
+
+    <br>
+    <h2 id="Propiedad_Display">Propiedad Display</h2>
+    <p>
+        Dentro de Flexbox tenemos una propiedad en css denominada <b>Display</b> la cual puede tener dos valores: <i>Flex</i> e <i>inline-flex</i> 
+    </p>
+    <p>
+        <b>Flex</b>: Agrupa una caja flexbox como un elemento en bloque. Entonces, si existiera otra caja con display en flex, la pondria abajo debido a que seria otro elemento de bloque
+    </p>
+    <p>
+        <b>Inline-flex</b> Agrupa a las caja de Flexbox como elementos en linea, por lo que si existira otra caja con display en inline-flex la pondria junto a la caja anterior
+    </p>
+    <p>
+        <b>Nota: Para verificar este comportamiento cambie el valor de la propiedad Display en el archivo <i>estilos.css</i> dentro de este proyecto
+        </b>
+    </p>
+    <section class="container">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+    </section>
+    <section class="container">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+    </section>
+    <br>
+    <a href="index.html#indice">Indice☝️</a>
+    <hr>
+    <h2 id="Propiedad-flexDirection">Direccion en Flexbox</h2>
+    <p>En Flexbox en la propiedad <b>Flex-direction</b> tenemos dos direcciones principales con las que podemos trabajar las cuales son <i>row</i> y <i>column</i></p>
+    <p><b>row</b>: Alinea todos sus elementos a forma de fila dentro de la caja flex</p>
+    <p><b>column</b>: Alinea todos sus elementos a forma de columna dentro de la caja flex</p>
+    <p>Ejemplo de direccion row</p>
+    <section class="propiedad-row">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+    </section>
+    <p>Ejemplo de direccion column</p>
+    <section class="propiedad-column">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+    </section>
+    <p><strong>Nota: Existen otras dos valores para la propiedad flex-direction los cuales son row-reverse y column-reverse, funcionan muy similar, la diferencia es con respecto el lugar donde acomodan el primer elemento</strong></p>
+    <p><strong>row-reverse alinea de derecha a izquierda</strong></p>
+    <p><strong>column-reverse alinea de abajo hacia arriba</strong></p>
+    <a href="index.html#indice">Indice☝️</a>
+    <hr>
+
+
+    <h2 id="Propiedad-wrap">Propiedad wrap</h2>
+    <p>La propiedad <b>flex-wrap</b> habilita una especie de envoltura en la caja flex, tiene dos posibles valores, <i>wrap</i> y <i>nowarp</i> esta es la propiedad que hace alusion a que si tuvieramos filas y columnas, pero hay que recordar que en flebox solo trabaja unidimensionalmente</p>
+    <p>Ejemplo de wrap</p>
+    <p>Aqui el <b>wrap</b> se activa, provocando que cuando sus elementos ya no quepan bien en la caja de padre, los reacomodara dentro de esta caja dando aslusion a que se tiene más columnas o más filas, esto dependiendo del valor en la orientacion que le hayamos puesto al contenedor</p>
+    <section class="propiedad-wrap">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+        <article class="item">Elemento 4</article>
+        <article class="item">Elemento 5</article>
+        <article class="item">Elemento 6</article>
+        <article class="item">Elemento 7</article>
+        <article class="item">Elemento 8</article>
+        <article class="item">Elemento 9</article>
+        <article class="item">Elemento 10</article>
+        <article class="item">Elemento 11</article>
+    </section>
+    <p>Ejemplo de nowrap</p>
+    <p>Aqui el <b>nowrap</b> se activa, sin embargo este ya viene por defecto, por lo que no es necesario definirlo en el CSS. Aqui todos los elementos se forzan a que quepan en una sola línea dentro del contenedor padre de acuerdo con la orientacion que se este trabajando, para que puedan caber, los elementos hijos se van reduciendo en su tamaño</p>
+    <p><b>En caso de que sean muchos elementos para el tamaño de la ventana, ocasionará que aparezca un scroll en el navegador</b></p>
+    <section class="propiedad-nowrap">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+        <article class="item">Elemento 4</article>
+        <article class="item">Elemento 5</article>
+        <article class="item">Elemento 6</article>
+        <article class="item">Elemento 7</article>
+        <article class="item">Elemento 8</article>
+        <article class="item">Elemento 9</article>
+        <article class="item">Elemento 10</article>
+        <article class="item">Elemento 11</article>
+        <article class="item">Elemento 12</article>
+        <!-- <article class="item">Elemento 13</article> -->
+    </section>
+    <a href="index.html#indice">Indice☝️</a>
+    <hr>
+
+    <h2 id="Alineacion">Alineacion de elementos</h2>
+    <p>Para alinear los elementos dentro del contenedor flex, recurrimos a la propiedad <b>justify-content</b> la cual alineara los elementos de acuerdo con la orientacion con la que se este trabajando, esta propiedad tiene los siguientes valores</p>
+    <p><b>flex-start</b>: Valor que viene por defecto, posiciona los elementos al inicio de la orientacion del flex, en este caso a la izquierda</p>
+    <section class="start">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+        <article class="item">Elemento 4</article>
+    </section>
+    <p><b>center</b>: Alinea los elementos dentro de la caja flex al centro</p>
+    <section class="centro">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+        <article class="item">Elemento 4</article>
+    </section>
+    <p><b>flex-end</b>: Alinea los elementos al final de la orientacion con la que se trabaje, en este caso a la derecha</p>
+    <section class="final">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+        <article class="item">Elemento 4</article>
+    </section>
+    <p><b>space-between</b>: Alinea los elementos dentro de la caja de tal manera que exista un espacio uniforme entre cada uno de ellos, pero no hay espacios en las orillas</p>
+    <section class="con-espacios">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+        <article class="item">Elemento 4</article>
+        <!-- <article class="item">Elemento 5</article> -->
+    </section>
+    <p><b>space-around</b>: Alinea los elementos dando ya espacios a las orillas, pero el espacio en las orillas y los que estan enmedio de la caja padre NO SON del mismo tamaño. Se podria decir que los espacios internos tienen el doble de tamaño que los espacios a las orillas</p>
+    <section class="espacios2">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+        <article class="item">Elemento 4</article>
+    </section>
+
+    <p><b>space-evenly</b>: Alinea los elementos dentro de la caja proporcionando espacios uniformes entre ellos y las orillas</p>
+    <section class="espacios3">
+        <article class="item">Elemento 1</article>
+        <article class="item">Elemento 2</article>
+        <article class="item">Elemento 3</article>
+        <article class="item">Elemento 4</article>
+    </section>
+    <p><strong>Nota: La alineacion se hara con respecto al espacio sobrante de la caja padre</strong></p>
+    <a href="index.html#indice">Indice☝️</a>
+
+    <hr>
+    <h2 id="Eje-Secundario">Alineacion en el Eje secundario o cross axis</h2>
+    <p>
+        Cuando se trabaja con Flexbox, se puede manipular dos ejes para trabajar, el eje principal o <b>main axis</b> y el eje secundario o <b>cross axis</b>. En esta seccion trabajaremos con el eje sedundario
+    </p>
+    <p>Para trabajar con el eje secundaio, tenemos dos propiedades importantes, el <i>align-items</i> y <i>align-content</i></p>
+    <p>Para mostrar con mayor claridad como trabajan estas propiedades, en nuestros contenedores asignaremos las propiedades por default</p>
+    <ul>
+        <li style="list-style: none;">flex-direction: row</li>
+        <li style="list-style: none;">flex-wrap: nowrap</li>
+        <li style="list-style: none;">justify-content: flex-start</li>
+    </ul>
+    <h3>Align items</h3>
+    <p><b>Stretch</b>: Esta propiedad ESTIRA a los elementos hijos al tamaño del contenedor padre</p>
+    <p><b>flex-start</b>: Similar a la alineacion en la propiedad justify-content, sin embargo, lo hace en el cross axis, es decir, que si tengo row en direccion, lo alineara al inicio de la columna y viceversa</p>
+    <p><b>flex-end</b></p>
+    <p><b>center</b>: Alinea al centro con respecto del eje secundario</p>
+    <p><b>baseline</b>: Esta propiedad alinea los elementos hijos de acuerdo a una linea base donde esten todos los textos de cada elemento hijo</p>
+    <h3>Align Content</h3>
+    <a href="index.html#indice">Indice☝️</a>
+</body>
+</html>
