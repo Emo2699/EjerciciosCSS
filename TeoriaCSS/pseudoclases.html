@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoClases</title>
+
+    <style>
+        /*Estilo unicamente para la etiqueta nav*/
+        .menu{
+            background-color: #13A4A4;
+        }
+        /*Estilo para la etiqueta ul del menu
+            Usamos list-style para modificar el estilo por defecto de la ul, se quitan los puntos negros de cada elemento li
+        */
+        .menu-nav{
+            list-style: none;
+        }
+
+        /*Estilo para la etiqueta li
+            Usamos el display para modificar su presentación, es decir
+            en lugar de que sea un bloque en vertical, que sea
+            un bloque en horizontal con el valor inline-block
+        */
+        .menu-nav__elemento{
+            display: inline-block;
+        }
+
+        /*Estilos para las etiquetas a dentro de todo el selector .menu-nav__elemento
+            cambiamos el color de letra, la decoracion del texto y su tamaño
+        */
+        .menu-nav__elemento a{
+            color: #ffff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /*  pseudo clases   */
+        /*las pseudo clases modifican los estilos de los estados
+        de los elementos a los que hacen referencia, es decir,
+        en este caso cambiamos los estilos cuando el mouse
+        pasa sobre la etiqueta a
+        asi como el estilo cuando se le da clic a la etiqueta
+        en ambos estilos cambiamos el color de la letra*/
+        .menu-nav__elemento a:hover{
+            color: rgb(242, 97, 19);
+        }
+        .menu-nav__elemento a:active{
+            color: rgb(19, 71, 242);
+        }
+
+        /*  pseudo elemento     
+            define el estilo de una parte del selector, en este
+            caso, del after o "despues" de nuestro selector */
+        .menu-nav__elemento a::after{
+            content: " | ";
+        }
+
+        /****************************************************/
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="menu-nav">
+                <li class="menu-nav__elemento"><a href="">Inicio</a></li>
+                <li class="menu-nav__elemento"><a href="">Preguntas</a></li>
+                <li class="menu-nav__elemento"><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

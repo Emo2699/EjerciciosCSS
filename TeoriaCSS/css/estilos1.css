@@ -1,0 +1,44 @@
+
+/* Selectores por etiquetas en HTML */
+
+/*
+h1{
+    color: blueviolet;
+    font-size: 50px;
+    text-align: center;
+}
+
+body{
+    background-color: aquamarine;
+    font-family: 'Times New Roman';
+}
+
+*/
+
+/*Selector Universal --> Afecta a todo*/
+*{
+    color: blue;
+}
+
+/*Selector por etiqueta*/
+p{
+    color: green;
+}
+/*Seleccion de más de un elemento*/
+h1, h2{
+    color: blueviolet;
+}
+
+/*Selector por clases*/
+.p1{
+    color: red;
+}
+.p2{
+    color: brown;
+    font-size: 30px;
+}
+
+/*Selector por ID*/
+#subtitulo{
+    font-weight: 800;
+}
