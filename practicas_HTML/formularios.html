@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form action="">
+        <!-- label = etiqueta de "etiqueta" -->
+        <label for="numero">Numero: </label>
+        <!-- input = etiqueta de cuadro para introducir texto -->
+        <input type="number" name="numero" id="numero">
+        <br><br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <br><br>
+        <label for="correo">Email:</label>
+        <input type="email" name="correo" id="correo">
+        <br><br>
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" id="pass" disabled>
+        <br><br>
+        <input type="submit" value="Enviar" name="enviar">
+
+        <!-- 
+            Glosario de atributos 
+            type = tipo del input (text, number, email, password,submit,...)
+            name = identificador del input UNICAMENTE dentro del HTML
+            id = identificador del input para el archivo JS
+            placeholder = texto muestra dentro del input
+            required = Forza a que el input tenga un valor ingresado por el usuario
+            value = Valor por defecto
+            readonly = Modo lectura del input
+            disable = deshabilita el input
+            size = tam del input (medida)
+            autofocus = posiciona al puntero en el input
+         -->
+    </form>
+</body>
+</html>

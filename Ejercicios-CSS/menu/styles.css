@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+
+.menu{
+    height: 15%;
+    background-color: rgb(26, 137, 119);
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    /*Estilos para flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color: #ffff;
+    text-decoration: none;
+
+    font-family: Arial;
+    font-size: 25px;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-around;
+}
+.logo img{
+    width: 35%;
+    height: 35%;
+}
+.logo p{
+    font-size: 35px;
+    flex: 1 1 auto;
+    margin-bottom: 10%;
+}
+.opciones{
+    min-width: 35%;
+}
+.opciones a{
+    padding-right: 15%;
+}
